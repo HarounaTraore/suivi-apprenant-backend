@@ -1,0 +1,555 @@
+{
+	"info": {
+		"_postman_id": "f874bc9d-3f45-458d-acff-b7c93b05c7da",
+		"name": "Student_management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38098654",
+		"_collection_link": "https://gestion-des-tudent.postman.co/workspace/Gestion-des-%C3%A9tudent-Workspace~2822b403-e40e-4607-8dd2-36f5d58603aa/collection/38098654-f874bc9d-3f45-458d-acff-b7c93b05c7da?action=share&source=collection_link&creator=38098654"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"admin1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/login/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/api/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/api/user/2"
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Harouna\",\r\n    \"email\": \"ht@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"role\": \"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/user/"
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Sidi\",\r\n    \"email\": \"ht@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"role\": \"Admin\",\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/user/3"
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Sidi\",\r\n    \"email\": \"ht@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"role\": \"Admin\",\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/user/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "students",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/api/students/"
+					},
+					"response": []
+				},
+				{
+					"name": "student",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/api/student/1"
+					},
+					"response": []
+				},
+				{
+					"name": "student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Harouna\",\r\n    \"email\": \"ht@gmail.com\",\r\n    \"phoneNumber\":\"00000000\",\r\n    \"address\": \"ILOT K\",\r\n    \"tutor\": \"Samba\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/student/"
+					},
+					"response": []
+				},
+				{
+					"name": "student",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Harouna Traore\",\r\n    \"email\": \"ht@gmail.com\",\r\n    \"phoneNumber\":\"00000000\",\r\n    \"address\": \"ILOT K\",\r\n    \"status\": true,\r\n    \"tutor\": \"Samba\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/student/3"
+					},
+					"response": []
+				},
+				{
+					"name": "student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Sidi\",\r\n    \"email\": \"ht@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"role\": \"Admin\",\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/student/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "module",
+			"item": [
+				{
+					"name": "modules",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/api/modules/"
+					},
+					"response": []
+				},
+				{
+					"name": "module",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/api/module/1"
+					},
+					"response": []
+				},
+				{
+					"name": "module",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Developement web\",\r\n    \"duration\": 72,\r\n    \"price\":5000.00,\r\n    \"status\": true\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/module/"
+					},
+					"response": []
+				},
+				{
+					"name": "module",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Comptabilité\",\r\n    \"duration\": 720,\r\n    \"price\":5000.00,\r\n    \"status\": true\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/module/1"
+					},
+					"response": []
+				},
+				{
+					"name": "module",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Sidi\",\r\n    \"email\": \"ht@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"role\": \"Admin\",\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/module/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "registration",
+			"item": [
+				{
+					"name": "registrations",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/api/registrations/"
+					},
+					"response": []
+				},
+				{
+					"name": "registration",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/api/registration/1"
+					},
+					"response": []
+				},
+				{
+					"name": "registration",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateRegister\": \"2024-05-06\",\r\n     \"startDate\": \"2024-05-06\",\r\n      \"studentId\": 1,\r\n      \"moduleId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/registration/"
+					},
+					"response": []
+				},
+				{
+					"name": "registration",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateRegister\": \"2024-05-06\",\r\n     \"startDate\": \"2024-05-06\",\r\n      \"studentId\": 1,\r\n      \"moduleId\": 1,\r\n      \"mount\": 20000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/registration/1"
+					},
+					"response": []
+				},
+				{
+					"name": "registration",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Sidi\",\r\n    \"email\": \"ht@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"role\": \"Admin\",\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/registration/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "payments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/api/payments/"
+					},
+					"response": []
+				},
+				{
+					"name": "payment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/api/payment/1"
+					},
+					"response": []
+				},
+				{
+					"name": "payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"payer\":\"Sidi Traore\",\r\n      \"payerNumber\":\"00112233\",\r\n      \"paymentMode\": \"Bankily\",\r\n      \"amount\": 500,\r\n      \"registrationId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/payment/"
+					},
+					"response": []
+				},
+				{
+					"name": "payment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"paymentDate\": \"2024-05-06\",\r\n      \"payer\":\"Sidi Diallo\",\r\n      \"payerNumber\":\"00112233\",\r\n      \"paymentMode\": \"Masrvi\",\r\n      \"amount\": 600,\r\n      \"registrationId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/payment/1"
+					},
+					"response": []
+				},
+				{
+					"name": "payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJBZG1pbmlzdHJhdGV1ciIsInJvbGUiOiJBZG1pbiIsInN0YXR1cyI6dHJ1ZSwiaWF0IjoxNzM0MDQ5NDc2LCJleHAiOjE3MzQwODU0NzZ9.HzA7b-E62bI_Qw1apYWw0xiboNBzE7HgpR-ZNQr5ClU"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Sidi\",\r\n    \"email\": \"ht@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"role\": \"Admin\",\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/api/payment/2"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

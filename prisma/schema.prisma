@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Module {
+  id             Int           @id @default(autoincrement())
+  name           String        @db.VarChar(50)
+  duration       Int
+  price          Decimal       @db.Decimal(10, 2)
+  status         Boolean
+  registrations  Registration[] 
+  @@map("modules")
+}
+
+model Student {
+  id             Int           @id @default(autoincrement())
+  fullName       String        @db.VarChar(50)
+  phoneNumber    String        @db.VarChar(15) @unique
+  email          String        @db.VarChar(100) @unique
+  address        String        @db.VarChar(100)
+  tutor          String        @db.VarChar(50)
+  registrations  Registration[] 
+  @@map("students")
+}
+
+model Registration {
+  id             Int           @id @default(autoincrement())
+  dateRegister   DateTime      @default(now())
+  startDate      DateTime
+  endDate        DateTime
+  mount          Decimal       @db.Decimal(10, 2)
+  studentId      Int           
+  student        Student       @relation(fields: [studentId], references: [id])
+  moduleId       Int           
+  module         Module        @relation(fields: [moduleId], references: [id])
+  payments       Payment[]     
+  @@map("registrations")
+}
+
+model Payment {
+  id             Int           @id @default(autoincrement())
+  paymentDate    DateTime      @default(now())
+  amount         Decimal       @db.Decimal(10, 2)
+  payer          String        @db.VarChar(50)
+  payerNumber    String        @db.VarChar(15)
+  paymentMode    String        @db.VarChar(50)
+  registrationId Int           
+  registration   Registration  @relation(fields: [registrationId], references: [id])
+  @@map("payments")
+}
